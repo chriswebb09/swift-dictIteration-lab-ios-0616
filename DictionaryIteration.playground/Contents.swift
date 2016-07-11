@@ -19,13 +19,14 @@
 // write your code here
 
 
-
+var bandAlbums = ["The Beatles": "Sgt Pepper's Lonely Hearts Club Band", "Nirvana": "Nevermind", "The Kinks": "Low Budget", "Blondie": "Parallel Lines"]
 
 /*: question2
  ### 2. Oops, we forgot an album! Add the Pixie's _Doolittle_ to the dictionary you created in Question 1.
  */
 // write your code here
 
+bandAlbums["Pixies"] = "Doolittle"
 
 
 
@@ -33,6 +34,8 @@
  ### 3. We don't care that much about The Kinks. Delete them from the dictionary you created in Question 1.
  */
 // write your code here
+
+bandAlbums.removeValueForKey("The Kinks")
 
 
 
@@ -44,14 +47,24 @@
 let bandName = "Nirvana"
 // write your code here
 
-
+print ("The \(bandName)'s top selling album was \(bandAlbums[bandName])")
 
 
 /*: question5
  ### 5. Iterate over the dictionary you created in Question 1 and print "<Band>'s top-selling album was <Album>" for each item in the dictionary.
  */
 // write your code here
+// write your code here
+for (band, album) in bandAlbums {
+    print(("\(band)'s top selling album was \(album)"))
+}
 
+/*: question6
+ ### 6. What type of data structure is returned when you iterate over a dictionary?
+ */
+for (key, value) in bandAlbums {
+    print ("\(key), \(value)")
+}
 
 
 
